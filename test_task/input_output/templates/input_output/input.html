@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}InputOutputApp | Input page{% endblock %}
+{% block content %}
+{% if success %}
+<div class="alert alert-warning alert-dismissible fade show container" role="alert">
+    <strong>Data published successfully!</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+</div> 
+{% endif %}
+{{ input_formset.management_form }}
+<form method="POST">
+    {% csrf_token %}
+    <div class="container">
+        <div id="input-stack" class="">
+            {% include 'input_output/forms/empty_form.html' with form=form %}
+        </div>
+        <hr>
+        <button id="add-input-btn" class="btn btn-secondary btn-block">Add another input</button>
+        <button type="submit" class="btn btn-info btn-block">Publish data</button>
+        <hr>
+        <a href="{% url 'input_output:output' %}">Go to output page!</a>
+    </div>
+</form>
+<div id="empty-form" style="display: none;">
+    {% include 'input_output/forms/empty_form.html' with form=form %}
+</div>
+<script>
+    $("#add-input-btn").click(function() {
+        new_input_form = $("#empty-form").html()
+        $("#input-stack").append(new_input_form)
+    })
+</script>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}InputOutputApp | Output page{% endblock %}
+{% block content %}
+<div class="container">
+    {% for obj in data %}
+        {{ obj.data }}
+    {% endfor %}
+    <hr>
+    <a href="{% url 'input_output:input' %}">Go to input page!</a>
+</div>
+{% endblock %}

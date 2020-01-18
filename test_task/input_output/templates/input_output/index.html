@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}InputOutputApp | Main page{% endblock %}
+{% block content %}
+<div class="container">
+    <hr>
+    <a href="{% url 'input_output:input' %}">Go to input page!</a>
+    <hr>
+    <a href="{% url 'input_output:output' %}">Go to output page!</a>
+    <hr>
+</div>
+{% endblock %}
