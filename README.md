@@ -3,3 +3,7 @@
   при нежатии на кнопку "добавить" будет появляться дополнительный input name1 и т.д.)
 - Сохранять данные в модели в поле типа json в posgresql (все добавленные инпуты)
 - Выводить в другом вьюсе данные из сабмиченых форм (просто json)
+
+![test1](https://user-images.githubusercontent.com/20661251/76978396-af212180-6947-11ea-9bc3-e47bef665586.jpg)
+
+![test2](https://user-images.githubusercontent.com/20661251/76978480-ce1fb380-6947-11ea-9293-b79dbf9402fe.jpg)
